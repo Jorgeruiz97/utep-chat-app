@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html data-theme="lemonade" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Chat App</title>
+
+    <!-- Import quick styling with DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body id="body">
+
+    <div id="app" class="grid grid-cols-1 grid-rows-9 gap-4">
+
+        <div id="header" class="row-start-1 row-span-1 navbar bg-primary text-primary-content sticky top-0 z-20">
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">UTEP Chat App</a>
+            </div>
+            <div class="flex-none">
+                <div id="username"></div>
+                <button id="auth-button" class="btn btn-sm w-20 mx-2 btn-square"></button>
+            </div>
+        </div>
+
+        <div id="messages" class="row-start-2 row-end-8 w-full mx-auto max-w-md">
+            <div id="messages-content" class="flex flex-col justify-end"></div>
+            <div id="spacer" class="h-20"></div>
+        </div>
+
+        <!-- Send Message Input -->
+        <div id="message-input" class="fixed bottom-0 p-3 w-full">
+            <div class="input-group max-w-md relative left-1/2 transform -translate-x-1/2">
+                <input id="input-messsage" type="text" placeholder="send a message…"
+                    class="input input-bordered w-full focus:outline-none" />
+                <button id="input-message-button" class="btn">
+                    🔥
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
